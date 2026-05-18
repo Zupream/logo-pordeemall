@@ -72,53 +72,68 @@
 
   /* ── Mobile responsive ── */
   @media (max-width: 768px) {
-    .wrap { padding: 32px 16px 64px; }
+    .wrap { padding: 28px 16px 56px; }
 
     header.intro {
       grid-template-columns: 1fr;
-      gap: 24px;
+      gap: 20px;
       align-items: start;
     }
-    h1 { font-size: 38px; letter-spacing: -1.2px; }
-    .lede { font-size: 15px; }
+    h1 { font-size: 36px; letter-spacing: -1px; margin: 8px 0 12px; }
+    .lede { font-size: 14px; line-height: 1.5; }
 
     .swatches { justify-content: flex-start; gap: 8px; }
-    .sw .chip { width: 52px; height: 52px; border-radius: 10px; }
+    .sw .chip { width: 48px; height: 48px; border-radius: 10px; }
+    .sw .lbl { font-size: 8px; }
+    .sw .hex { font-size: 9px; }
 
-    section { margin-top: 40px; }
-    h2 { font-size: 11px; letter-spacing: 3px; margin-bottom: 16px; }
+    section { margin-top: 36px; }
+    h2 { font-size: 11px; letter-spacing: 3px; margin-bottom: 14px; }
 
-    .grid { grid-template-columns: 1fr; gap: 16px; }
-    .grid.compact { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    /* All grids become single column on mobile */
+    .grid,
+    .grid.compact { grid-template-columns: 1fr !important; gap: 14px; }
 
     .card { border-radius: 14px; }
     .card .preview { aspect-ratio: 16 / 10; }
-    .card.square .preview { aspect-ratio: 1 / 1; }
-    .grid.compact .card .preview { min-height: 180px; }
+    .card.square .preview { aspect-ratio: 4 / 3; }
+    .grid.compact .card .preview { min-height: 0; aspect-ratio: 4 / 3; flex: none; }
 
-    .meta { padding: 12px 14px; flex-wrap: wrap; gap: 8px; }
-    .meta .info .num { font-size: 10px; letter-spacing: 1.5px; }
-    .meta .info .ttl { font-size: 14px; }
+    /* Meta stacks vertically so nothing gets clipped */
+    .meta {
+      padding: 12px 14px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .meta .info .num { font-size: 10px; }
+    .meta .info .ttl { font-size: 15px; }
     .meta .info .sub { font-size: 11px; }
-    .dl { font-size: 10px; padding: 6px 10px; }
+    .dl { font-size: 10px; padding: 8px 14px; align-self: flex-start; }
 
-    .hero-card { border-radius: 16px; }
-    .hero-card .preview { padding: 32px 24px; }
+    .hero-card { border-radius: 14px; }
+    .hero-card .preview { padding: 28px 20px; }
     .hero-card .preview img { max-width: 100%; }
-    .hero-card .meta { padding: 14px 16px; flex-wrap: wrap; }
-    .hero-card .meta .info .ttl { font-size: 16px; }
+    .hero-card .meta {
+      padding: 12px 14px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .hero-card .meta .info .ttl { font-size: 15px; }
+    .hero-card .meta .info .sub { font-size: 11px; }
 
     .pack {
-      margin-top: 40px;
+      margin-top: 36px;
       flex-direction: column;
       align-items: stretch;
       text-align: center;
-      padding: 28px 24px;
-      border-radius: 16px;
-      gap: 16px;
+      padding: 24px 20px;
+      border-radius: 14px;
+      gap: 14px;
     }
     .pack h3 { font-size: 18px; }
-    .pack p { font-size: 13px; }
+    .pack p { font-size: 12px; }
     .pack a.bigdl {
       display: block;
       text-align: center;
@@ -126,25 +141,11 @@
     }
 
     footer {
-      margin-top: 40px;
+      margin-top: 36px;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
       text-align: center;
     }
-  }
-
-  @media (max-width: 420px) {
-    .wrap { padding: 24px 12px 48px; }
-    h1 { font-size: 32px; }
-    .swatches { gap: 6px; }
-    .sw .chip { width: 44px; height: 44px; border-radius: 8px; }
-    .sw .lbl { font-size: 8px; }
-    .sw .hex { font-size: 9px; }
-
-    .grid.compact { grid-template-columns: 1fr; }
-    .grid.compact .card .preview { min-height: 220px; }
-
-    .hero-card .preview { padding: 24px 16px; }
   }
 </style>
 </head>
