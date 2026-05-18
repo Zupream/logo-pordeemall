@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8" />
+<title>PordeeMall — Logo Pack</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --green: #0E6B5A;
+    --green-deep: #0A5747;
+    --gold: #C9A15B;
+    --gold-deep: #A8823F;
+    --ivory: #F6F1E6;
+    --cream: #FBF7EE;
+    --ink: #1F2A26;
+    --paper: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background: var(--ivory); color: var(--ink); font-family:'Plus Jakarta Sans','IBM Plex Sans Thai',system-ui,sans-serif; }
+  a { color: var(--green); }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 56px 32px 96px; }
+  header.intro { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: end; padding-bottom: 32px; border-bottom: 1px solid rgba(31,42,38,.12); }
+  .eyebrow { font-family:'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-deep); }
+  h1 { font-size: 56px; line-height: 1.02; margin: 12px 0 16px; letter-spacing: -2px; font-weight: 800; color: var(--green); }
+  h1 em { font-style: normal; color: var(--gold); }
+  .lede { font-size: 17px; line-height: 1.55; color: rgba(31,42,38,.78); max-width: 60ch; }
+  .swatches { display:flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .sw { display:flex; flex-direction:column; align-items:flex-start; gap:6px; }
+  .sw .chip { width: 78px; height: 78px; border-radius: 14px; border: 1px solid rgba(0,0,0,.06); }
+  .sw .lbl { font-family:'JetBrains Mono', ui-monospace, monospace; font-size: 10px; color: rgba(31,42,38,.65); letter-spacing: 1px; }
+  .sw .hex { font-family:'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: var(--ink); }
+
+  section { margin-top: 64px; }
+  h2 { font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: var(--green); margin: 0 0 24px; font-weight: 700; font-family:'JetBrains Mono', ui-monospace, monospace; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .grid.compact { grid-template-columns: repeat(3, 1fr); }
+
+  .card { background: var(--paper); border-radius: 18px; overflow: hidden; border: 1px solid rgba(31,42,38,.08); display: flex; flex-direction: column; }
+  .card .preview { aspect-ratio: 16 / 9; display:flex; align-items:center; justify-content:center; overflow:hidden; background: var(--cream); }
+  .card.square .preview { aspect-ratio: 1 / 1; }
+  .grid.compact .card { min-height: 0; }
+  .grid.compact .card .preview { aspect-ratio: auto; flex: 1 1 auto; min-height: 320px; }
+  .card .preview img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .meta { padding: 16px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .meta .info .num { font-family:'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: var(--gold-deep); letter-spacing: 2px; }
+  .meta .info .ttl { font-size: 16px; font-weight: 700; color: var(--ink); margin-top: 2px; }
+  .meta .info .sub { font-size: 12px; color: rgba(31,42,38,.55); margin-top: 2px; }
+  .dl { font-family:'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 1px; color: var(--green); text-decoration: none; border: 1px solid rgba(14,107,90,.25); padding: 8px 12px; border-radius: 999px; white-space: nowrap; transition: background .15s; }
+  .dl:hover { background: rgba(14,107,90,.06); }
+
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .pair .card { border-radius: 18px; }
+
+  .pack { margin-top: 64px; background: var(--green); color: var(--cream); border-radius: 22px; padding: 36px 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .pack h3 { margin: 0 0 6px; font-size: 22px; letter-spacing: -.4px; }
+  .pack p { margin: 0; color: rgba(251,247,238,.75); font-size: 14px; }
+  .pack a.bigdl { background: var(--gold); color: var(--ink); padding: 14px 24px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px; letter-spacing: .5px; }
+
+  footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid rgba(31,42,38,.12); font-size: 12px; color: rgba(31,42,38,.55); display:flex; justify-content: space-between; }
+  footer a { color: var(--green-deep); }
+
+  .hero-card { background: var(--paper); border-radius: 22px; overflow: hidden; border: 1px solid rgba(31,42,38,.08); display: flex; flex-direction: column; }
+  .hero-card .preview { display:flex; align-items:center; justify-content:center; overflow:hidden; background: var(--cream); padding: 56px 48px; }
+  .hero-card .preview img { max-width: 520px; width: 100%; height: auto; display: block; }
+  .hero-card .meta { padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid rgba(31,42,38,.06); }
+  .hero-card .meta .info .num { font-family:'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: var(--gold-deep); letter-spacing: 2px; }
+  .hero-card .meta .info .ttl { font-size: 18px; font-weight: 700; color: var(--ink); margin-top: 2px; }
+  .hero-card .meta .info .sub { font-size: 13px; color: rgba(31,42,38,.55); margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="intro">
+    <div>
+      <div class="eyebrow">Brand · Logo delivery</div>
+      <h1>Pordee<em>Mall</em></h1>
+      <div class="lede">โลโก้ต้นฉบับ 6 ทิศทาง ออกแบบให้กลมกลืนกับ UI ของเว็บไซต์ (โทนเขียวเข้ม + ทองอบอุ่น) พร้อมเวอร์ชัน reversed บนพื้นเข้ม, ไอคอนแอป, และ avatar กลม — ส่งมอบเป็น PNG ความละเอียดสูง</div>
+    </div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#0E6B5A"></div><div class="lbl">PRIMARY</div><div class="hex">#0E6B5A</div></div>
+      <div class="sw"><div class="chip" style="background:#0A5747"></div><div class="lbl">DEEP</div><div class="hex">#0A5747</div></div>
+      <div class="sw"><div class="chip" style="background:#C9A15B"></div><div class="lbl">GOLD</div><div class="hex">#C9A15B</div></div>
+      <div class="sw"><div class="chip" style="background:#F6F1E6;border-color:rgba(0,0,0,.1)"></div><div class="lbl">IVORY</div><div class="hex">#F6F1E6</div></div>
+      <div class="sw"><div class="chip" style="background:#1F2A26"></div><div class="lbl">INK</div><div class="hex">#1F2A26</div></div>
+    </div>
+  </header>
+
+  <section>
+    <h2>00 · Official logo</h2>
+    <div class="hero-card">
+      <div class="preview">
+        <img src="logos/Logo_PordeeMall.png" alt="PordeeMall Official Logo" />
+      </div>
+      <div class="meta">
+        <div class="info">
+          <div class="num">00 · OFFICIAL LOGO</div>
+          <div class="ttl">PordeeMall — โลโก้หลัก</div>
+          <div class="sub">ถุงช้อปปิ้ง + ใบไม้ + รอยยิ้ม · ใช้งานหลักทุกช่องทาง</div>
+        </div>
+        <a class="dl" href="logos/Logo_PordeeMall.png" download>Download PNG</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>01 · Primary lockups</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="preview"><img src="logos/01-wordmark-leaf.png" alt="Wordmark with leaf tick" /></div>
+        <div class="meta">
+          <div class="info"><div class="num">01 · LEAF-TICK WORDMARK</div><div class="ttl">PordeeMall + leaf tick</div><div class="sub">บน Ivory · primary use</div></div>
+          <a class="dl" href="logos/01-wordmark-leaf.png" download>Download PNG</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="preview"><img src="logos/02-wordmark-leaf-dark.png" alt="Reversed on green" /></div>
+        <div class="meta">
+          <div class="info"><div class="num">01b · REVERSED</div><div class="ttl">On primary green</div><div class="sub">สำหรับใช้บนเฮดเดอร์ / แบนเนอร์</div></div>
+          <a class="dl" href="logos/02-wordmark-leaf-dark.png" download>Download PNG</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="preview"><img src="logos/04-bag-cream.png" alt="Bag mark" /></div>
+        <div class="meta">
+          <div class="info"><div class="num">02 · BAG + CHECK</div><div class="ttl">Shopping bag mark</div><div class="sub">เป็นมิตร · เหมาะ marketplace</div></div>
+          <a class="dl" href="logos/04-bag-cream.png" download>Download PNG</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="preview" style="background:#fff"><img src="logos/05-bag-white.png" alt="Bag mark on white" /></div>
+        <div class="meta">
+          <div class="info"><div class="num">02b · ON WHITE</div><div class="ttl">Paper variant</div><div class="sub">สำหรับเอกสาร · invoice</div></div>
+          <a class="dl" href="logos/05-bag-white.png" download>Download PNG</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="preview"><img src="logos/08-bilingual.png" alt="Editorial bilingual" /></div>
+        <div class="meta">
+          <div class="info"><div class="num">03 · BILINGUAL EDITORIAL</div><div class="ttl">PordeeMall · พอดี มอลล์</div><div class="sub">มี Thai script · เหมาะแบรนด์</div></div>
+          <a class="dl" href="logos/08-bilingual.png" download>Download PNG</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="preview"><img src="logos/09-bilingual-dark.png" alt="Editorial bilingual reversed" /></div>
+        <div class="meta">
+          <div class="info"><div class="num">03b · REVERSED</div><div class="ttl">On deep green</div><div class="sub">สำหรับใช้บนพื้นมืด</div></div>
+          <a class="dl" href="logos/09-bilingual-dark.png" download>Download PNG</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>02 · Compact marks</h2>
+    <div class="grid compact">
+      <div class="card square">
+        <div class="preview"><img src="logos/03-badge.png" alt="Badge" /></div>
+        <div class="meta">
+          <div class="info"><div class="num">04 · CIRCLE BADGE</div><div class="ttl">P · monogram badge</div></div>
+          <a class="dl" href="logos/03-badge.png" download>PNG</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="preview"><img src="logos/06-pricetag.png" alt="Price tag" /></div>
+        <div class="meta">
+          <div class="info"><div class="num">05 · PRICE TAG</div><div class="ttl">Tag emblem</div></div>
+          <a class="dl" href="logos/06-pricetag.png" download>PNG</a>
+        </div>
+      </div>
+      <div class="card square">
+        <div class="preview"><img src="logos/07-monogram.png" alt="P + M monogram" /></div>
+        <div class="meta">
+          <div class="info"><div class="num">06 · P + M MONOGRAM</div><div class="ttl">Geometric mark</div></div>
+          <a class="dl" href="logos/07-monogram.png" download>PNG</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>03 · App icons & avatar</h2>
+    <div class="grid compact">
+      <div class="card square">
+        <div class="preview" style="background:#0E6B5A"><img src="logos/10-app-icon.png" alt="App icon" /></div>
+        <div class="meta">
+          <div class="info"><div class="num">APP ICON</div><div class="ttl">1024×1024 · iOS / Android</div></div>
+          <a class="dl" href="logos/10-app-icon.png" download>PNG</a>
+        </div>
+      </div>
+      <div class="card square">
+        <div class="preview"><img src="logos/11-avatar.png" alt="Round avatar" /></div>
+        <div class="meta">
+          <div class="info"><div class="num">AVATAR</div><div class="ttl">Round P · social</div></div>
+          <a class="dl" href="logos/11-avatar.png" download>PNG</a>
+        </div>
+      </div>
+      <div class="card square">
+        <div class="preview" style="background:linear-gradient(135deg,#0E6B5A,#0A5747); color:#F6F1E6; flex-direction:column; gap:14px;">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:42px; letter-spacing:-1px; color:#F6F1E6;">Pordee<span style="color:#C9A15B">Mall</span></div>
+          <div style="font-family:'IBM Plex Sans Thai',sans-serif; font-size:12px; letter-spacing:6px; color:#C9A15B;">ของดี · พอดี · ส่งตรง</div>
+        </div>
+        <div class="meta">
+          <div class="info"><div class="num">PREVIEW</div><div class="ttl">Header treatment</div></div>
+          <span class="dl" style="opacity:.5;border-style:dashed;">live</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pack">
+    <div>
+      <h3>ดาวน์โหลดทั้งชุด</h3>
+      <p>PNG 12 ไฟล์ · official logo + primary lockups + reversed + compact marks + app icons</p>
+    </div>
+    <a class="bigdl" href="logos/" download>ดาวน์โหลดทั้งโฟลเดอร์ →</a>
+  </div>
+
+  <footer>
+    <span>PordeeMall · Logo system v1 · 2026</span>
+    <span></span>
+  </footer>
+</div>
+</body>
+</html>
